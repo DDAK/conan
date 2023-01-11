@@ -146,9 +146,9 @@ class LibtorchConan(ConanFile):
 
     def build_requirements(self):
         if not self.options.build_custom_protobuf:
-            self.build_requires("protobuf/3.12.1@forwardmeasure/stable")  # Could use the one from bincrafters
+            self.build_requires("protobuf/3.21.9")
         if self.options.use_system_eigen_install:
-            self.build_requires("eigen/3.3.7@conan/stable")
+            self.build_requires("eigen/3.4.0")
         if self.options.build_test:
             self.build_requires("benchmark/1.4.1@bincrafters/stable")
             self.build_requires("gflags/2.2.2@bincrafters/stable")
